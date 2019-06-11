@@ -4,8 +4,6 @@ import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ScriptExtHtmlWebpackPlugin from 'script-ext-html-webpack-plugin';
 
-import { name as appName } from '../package.json';
-
 const port = process.env.PORT || 8080;
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -75,7 +73,6 @@ export default {
       },
       templateParameters: {
         // This object will be available in the template
-        appName,
       },
     }),
 
